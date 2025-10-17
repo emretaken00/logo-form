@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Logo Tasarım Brief Formu</title>
+  <style>
+    :root {
+      --bg: #0b0c0f; --card:#12141a; --ink:#e9edf1; --muted:#a8b0ba; --accent:#4da3ff;
+      --line:#1f2430; --radius:16px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: linear-gradient(180deg, #0b0c0f 0%, #0e1117 100%);
+      color: var(--ink); line-height: 1.5; padding: 32px 16px;
+    }
+    .wrap { max-width: 880px; margin: 0 auto; }
+    .card {
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: var(--radius); padding: 28px; box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+    h1 { margin: 0 0 6px; font-size: clamp(24px, 3vw, 32px); }
+    p.lead { margin: 0 0 24px; color: var(--muted); }
+    fieldset {
+      border: 1px solid var(--line); border-radius: 14px; padding: 18px; margin: 18px 0 0;
+    }
+    legend { padding: 0 8px; color: var(--muted); font-size: 13px; }
+    .grid { display: grid; gap: 14px; grid-template-columns: repeat(12, 1fr); }
+    .col-12 { grid-column: span 12; }
+    .col-6 { grid-column: span 12; }
+    @media (min-width: 760px) { .col-6 { grid-column: span 6; } }
+    label { display: block; font-weight: 600; margin-bottom: 6px; }
+    .hint { font-size: 12px; color: var(--muted); margin-top: 4px; }
+    input[type="text"], textarea, select {
+      width: 100%; padding: 12px 14px; background: #0f1218; color: var(--ink);
+      border: 1px solid var(--line); border-radius: 12px; outline: none;
+    }
+    textarea { min-height: 110px; resize: vertical; }
+    .checkgroup { display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); }
+    .chip {
+      display: flex; align-items: center; gap: 8px; background: #0f1218;
+      border: 1px solid var(--line); padding: 10px 12px; border-radius: 12px;
+    }
+    .actions { display: flex; gap: 12px; margin-top: 22px; }
+    button {
+      padding: 12px 18px; border-radius: 12px; border: 1px solid var(--line);
+      background: var(--accent); color: #071018; font-weight: 700; cursor: pointer;
+    }
+    .ghost { background: transparent; color: var(--ink); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>🎨 Logo Tasarım Brief Formu</h1>
+      <p class="lead">Lütfen aşağıdaki alanları doldurun. Bu bilgiler markanızı en iyi şekilde yansıtan logoyu tasarlamamı sağlar.</p>
+
+      <form action="https://formsubmit.co/emretaken01@gmail.com" method="POST">
+        <!-- Gizli ayarlar -->
+        <input type="hidden" name="_subject" value="Yeni Logo Brief Başvurusu">
+        <input type="hidden" name="_next" value="https://kullaniciadın.github.io/logo-form/tesekkurler.html">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" style="display:none">
+
+        <!-- Marka Bilgileri -->
+        <fieldset>
+          <legend>1) Marka Bilgileri</legend>
+          <div class="grid">
+            <div class="col-6">
+              <label for="brand">Marka Adı *</label>
+              <input type="text" id="brand" name="Marka Adı" required />
+            </div>
+            <div class="col-6">
+              <label for="slogan">Slogan (varsa)</label>
+              <input type="text" id="slogan" name="Slogan" />
+            </div>
+            <div class="col-6">
+              <label for="sector">Sektör / Faaliyet Alanı *</label>
+              <input type="text" id="sector" name="Sektör" required />
+            </div>
+            <div class="col-12">
+              <label for="about">Kısa Marka Tanımı</label>
+              <textarea id="about" name="Marka Tanımı"></textarea>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Hedef Kitle -->
+        <fieldset>
+          <legend>2) Hedef Kitle</legend>
+          <div class="grid">
+            <div class="col-12">
+              <label for="audience">Ürün veya hizmetiniz kimlere hitap ediyor?</label>
+              <textarea id="audience" name="Hedef Kitle"></textarea>
+            </div>
+            <div class="col-6">
+              <label for="age">Yaş aralığı / tarz</label>
+              <input type="text" id="age" name="Yaş Aralığı" />
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Marka Kişiliği -->
+        <fieldset>
+          <legend>3) Marka Kişiliği</legend>
+          <div class="checkgroup">
+            <label class="chip"><input type="checkbox" name="Marka Kişiliği" value="Kurumsal" /> Kurumsal</label>
+            <label class="chip"><input type="checkbox" name="Marka Kişiliği" value="Dinamik" /> Dinamik</label>
+            <label class="chip"><input type="checkbox" name="Marka Kişiliği" value="Yaratıcı" /> Yaratıcı</label>
+            <label class="chip"><input type="checkbox" name="Marka Kişiliği" value="Samimi" /> Samimi</label>
+            <label class="chip"><input type="checkbox" name="Marka Kişiliği" value="Lüks" /> Lüks</label>
+            <label class="chip"><input type="checkbox" name="Marka Kişiliği" value="Minimal" /> Minimal</label>
+          </div>
+        </fieldset>
+
+        <!-- Tasarım Tercihleri -->
+        <fieldset>
+          <legend>4) Tasarım Tercihleri</legend>
+          <div class="grid">
+            <div class="col-12">
+              <label for="colors">Renk tercihleri veya kaçınılacak renkler</label>
+              <textarea id="colors" name="Renk Tercihleri"></textarea>
+            </div>
+            <div class="col-6">
+              <label for="typeface">Yazı tipi tarzı</label>
+              <input type="text" id="typeface" name="Yazı Tipi Tarzı" />
+            </div>
+            <div class="col-12">
+              <label for="logotype">Logo türü tercihi</label>
+              <select id="logotype" name="Logo Türü">
+                <option value="">Seçiniz...</option>
+                <option value="Sadece yazı (Wordmark)">Sadece yazı (Wordmark)</option>
+                <option value="Harf bazlı (Lettermark)">Harf bazlı (Lettermark)</option>
+                <option value="Sembol / ikon">Sembol / ikon</option>
+                <option value="Kombinasyon">Kombinasyon (yazı + ikon)</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Kullanım Alanları -->
+        <fieldset>
+          <legend>5) Kullanım Alanları</legend>
+          <div class="checkgroup">
+            <label class="chip"><input type="checkbox" name="Kullanım Alanları" value="Sosyal Medya" /> Sosyal Medya</label>
+            <label class="chip"><input type="checkbox" name="Kullanım Alanları" value="Web Sitesi" /> Web Sitesi</label>
+            <label class="chip"><input type="checkbox" name="Kullanım Alanları" value="Kartvizit" /> Kartvizit</label>
+            <label class="chip"><input type="checkbox" name="Kullanım Alanları" value="Tabela" /> Tabela</label>
+            <label class="chip"><input type="checkbox" name="Kullanım Alanları" value="Ürün Etiketi" /> Ürün Etiketi</label>
+          </div>
+        </fieldset>
+
+        <!-- Ekstra Notlar -->
+        <fieldset>
+          <legend>6) Ekstra Notlar</legend>
+          <textarea id="notes" name="Ek Notlar" placeholder="Eklemek istediğiniz özel istek veya fikir var mı?"></textarea>
+        </fieldset>
+
+        <div class="actions">
+          <button type="submit">Gönder</button>
+          <button type="reset" class="ghost">Temizle</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
